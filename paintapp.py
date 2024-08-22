@@ -33,10 +33,10 @@ class paint:
         self.C.delete(ALL)
 
     def change_fg(self):
-        self.color_fg = askcolor()
+        self.color_fg = askcolor(color=self.color_fg)[1]
     
     def change_bg(self):
-        self.color_bg = askcolor()
+        self.color_bg = askcolor(color=self.color_bg)[1]
         self.C['bg'] = self.color_bg
 
     def drawWidgets(self):
